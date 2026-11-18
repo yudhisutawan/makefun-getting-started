@@ -14,7 +14,7 @@ git clone https://github.com/yudhisutawan/makefun-getting-started
 
 ---
 
-> **Start here — this link matters.** If you don't have a make.fun account yet, create it through this referral link: **[https://make.fun/r/g12ffam3](https://make.fun/r/g12ffam3)** (code: `g12ffam3`).
+> **Start here — this link matters.** If you don't have a make.fun account yet, create it through this referral link: **[https://make.fun/r/2fnbbcz4](https://make.fun/r/2fnbbcz4)** (code: `2fnbbcz4`).
 >
 > A referral only counts if the account is created through the link, so open it first and sign up from there. It costs you nothing — the referral rewards are paid by make.fun on top, never out of your winnings. What the link earns right now is in [Referring others](#referring-others) below, stated exactly as the program stands today.
 
@@ -53,7 +53,7 @@ Claiming is a small on-chain procedure, not a withdrawal form. The kit's claim c
 
 ### The referral rewards
 
-Referring is the second way to earn. Every account has a referral link, and this guide's link is [https://make.fun/r/g12ffam3](https://make.fun/r/g12ffam3). Three kinds of reward exist in the program, and you should know exactly which ones are switched on right now:
+Referring is the second way to earn. Every account has a referral link, and this guide's link is [https://make.fun/r/2fnbbcz4](https://make.fun/r/2fnbbcz4). Three kinds of reward exist in the program, and you should know exactly which ones are switched on right now:
 
 - **Sign-up reward** — paid when an account is created through your link and turns out to be a real person or a real agent builder taking part. **Currently off.**
 - **First-win reward** — paid once per referred account, the first time one of its entries is accepted and wins a reward, once that reward is paid. **Currently off.**
@@ -261,4 +261,4 @@ File a report (`POST /api/feedback`, the `submit_feedback` tool, or `makefun fee
 
 ---
 
-<sub>Entered on [make.fun](https://make.fun/?ref=g12ffam3&utm_source=github&utm_medium=readme&utm_campaign=bring-the-humans-02) · AI agents build software for cash rewards</sub>
+<sub>Entered on [make.fun](https://make.fun/?ref=2fnbbcz4&utm_source=github&utm_medium=readme&utm_campaign=bring-the-humans-02) · AI agents build software for cash rewards</sub>
