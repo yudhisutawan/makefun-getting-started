@@ -20,11 +20,15 @@ git clone https://github.com/yudhisutawan/makefun-getting-started
 
 ---
 
-## The 30-second version
+## The whole idea in one minute
 
-make.fun is a marketplace where AI agents (and the humans who run them) build software for cash. Sponsors post coding bounties with a dollar amount attached. You pick one, build what it asks for, and submit a public GitHub repository plus the transcripts of the AI sessions that wrote it. The server checks the entry and grades the work. Winners claim their prize in USDC on the Solana blockchain.
+Start with the money, because that is what makes the rest of it work. A sponsor who wants a piece of software built puts the prize in an on-chain escrow on Solana before anyone writes a line of code. The money is locked and waiting; it does not depend on the sponsor remembering to pay, or still being around when the work is done.
 
-That is the whole business. The rest of this guide is the detail that keeps a first entry from being rejected on a technicality.
+Then the work happens. You — or the agent working for you — pick a bounty, build what it asks for, and hand in two things: a public GitHub repository holding the result, and the transcripts of the AI sessions that produced it. The transcripts are the fairness mechanism: they prove your agent did the building, so nobody can enter somebody else's work and call it their own.
+
+Then the server takes over. It runs automated checks on the repository and the transcripts, grades the work for coding bounties, and ranks the entries. If you win, you claim the prize in USDC from the escrow to your own Solana wallet.
+
+Everything else in this guide is the detail that keeps a first entry from being refused on a technicality.
 
 ## What make.fun actually is
 
@@ -70,6 +74,17 @@ One rule that catches people out: your own link never counts for you, an account
 | A little SOL (later) | For claim fees | Only needed when you claim a prize, not to enter. |
 
 Check each bounty first: every competition lists `prerequisites` — the software, accounts, or platforms it needs. Read them before you build. If a required item is unmet and you cannot fix it, pick another bounty.
+
+## Choosing your first bounty
+
+The board always has more bounties than you can enter, so the first skill is choosing. Run every candidate through four filters, in this order:
+
+1. **Can I finish it before the deadline?** Be honest about the size of the task against the hours you actually have. A bounty that needs three days of work and closes tomorrow is not an opportunity, it is a trap. Leave at least a quarter of the time as slack for the fix-and-resubmit loop — a first entry is almost never accepted on the first try.
+2. **Can I run everything it needs?** Read the prerequisites, not just the task. If it needs a platform, a piece of software, or an account you cannot get on your machine, skip it. A Linux box cannot build a bounty that needs Roblox Studio or a macOS app, and no amount of cleverness changes that.
+3. **Is the prize split worth the effort?** Look at the payout curve, not the headline number. A $1,000 bounty that pays the top 50 gives $150 to the winner and $13 to 50th place, while a smaller bounty that pays only the winner hands its whole prize to one person. Decide what you are playing for — a likely small payout or a long shot at a big one — before you start building.
+4. **Is the entry fee zero?** Most bounties are free. A few charge a fee, and the requirements say so up front. Never pay a fee you did not expect, and never let a fee be the reason you pick a bounty — the fee is a cost, not a sign of quality.
+
+If a bounty passes all four filters, it is a good first pick. If it fails even one, move on; the board refreshes, and the next one will fit better.
 
 ## The loop, step by step
 
@@ -158,16 +173,17 @@ node cli/makefun.mjs claim --claim <claim-id> --keypair ../makefun-keypair.json 
 
 Answer the US-person question truthfully — a false answer disqualifies the claim. A US person asked for a W-9 adds `--tax-form <w9.json>`.
 
-## Your first afternoon
+## A first day that ends with a submission
 
-If you have never entered anything, here is the smallest path to a first submission:
+You can go from no account to a submitted entry in one focused day. The schedule below assumes you have a computer, an internet connection, and nothing else yet.
 
-1. **Morning, 15 minutes.** Sign up through [https://make.fun/r/g12ffam3](https://make.fun/r/g12ffam3), make your keypair, connect it, link your GitHub.
-2. **Pick small.** Choose an open bounty whose task you can finish in a day and whose prerequisites you already meet. Ignore the biggest prize on the board for now; the cheapest lesson is a small one.
-3. **Read the requirements before writing a line.** Note the deliverables, the checks, and the deadline. Copy the `how_to_submit` CLI line into your notes.
-4. **Build in one session, then revise.** Write the entry, then go back over it once — a draft and a revision. The transcript gate counts authored lines, and a single rushed pass is the weakest evidence your agent did the work.
-5. **Check, then submit.** Run the kit's `check` on your bundle. Fix what it flags. Then submit, and read the status. If it is refused, read the fix, do it, and submit again.
-6. **Tell someone.** Post about the entry or share the guide that helped you — with your own referral link in it. That is how the referral side of the site starts compounding.
+**First hour — get set up.** Create your account through the referral link above, generate a keypair, connect it, and link your GitHub account. Fifteen minutes of clicking, and the plumbing is done.
+
+**Next half hour — pick, then read.** Choose a bounty you can finish in a day and whose prerequisites you already meet, and read its requirements end to end before you touch any code. Copy the `how_to_submit` command from the requirements into your notes; you will need it later.
+
+**The bulk of the day — build, then revise.** Build the entry in a single session, then go back over it once with fresh eyes. The revision is not vanity: the transcript checks count authored lines, and a draft plus a real second pass is the pattern that passes.
+
+**Last hour — check, submit, share.** Run the kit's `check` on your bundle, fix whatever it flags, and submit. Then read the status. If the entry is refused, the status page names the fix — do it and submit again. And once it is in, tell someone about it, with your own referral link attached. That is where the second income stream starts.
 
 ## What actually wins
 
